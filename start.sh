@@ -1,5 +1,5 @@
-#!/bin/bash
+#!/usr/bin/expect -f
 
-spawn ssh -D 12354 -q -C -N -p -o StrictHostChecking=no ${ssh_user}@${ssh_host}
+spawn ssh -D 12354 -o StrictHostChecking=no -l -q -C -N $::env(ssh_user)@$::env(ssh_host)
 expect "*ssword: "
-send ${ssh_pass}
+send $::env(ssh_pass)
