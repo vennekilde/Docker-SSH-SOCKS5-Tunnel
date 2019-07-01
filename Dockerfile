@@ -5,6 +5,7 @@ RUN apk update \
   openssh-client \
   sshpass \
   ca-certificates \
+  expect \
   bash
 
 RUN mkdir app
