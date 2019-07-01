@@ -10,3 +10,5 @@ Set the following environment variables
 - ssh_host
 - ssh_user
 - ssh_pass
+
+Exposes the SOCKS5 tunnel on port 12345
