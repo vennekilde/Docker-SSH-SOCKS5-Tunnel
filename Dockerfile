@@ -1,7 +1,5 @@
 FROM alpine:latest
 
-RUN mkdir app
-RUN cd app
 RUN apk update \
   && apk add \
   openssh-client \
@@ -9,6 +7,7 @@ RUN apk update \
   ca-certificates \
   bash
 
-COPY start.sh start.sh
+RUN mkdir app
+COPY start.sh /app/start.sh
 
 CMD ["/app/start.sh"]
